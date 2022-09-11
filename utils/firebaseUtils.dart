@@ -15,9 +15,6 @@ class FirebaseUtils {
   factory FirebaseUtils() => _singleton;
   FirebaseUtils._internal();
 
-  // arlc@gmail.com
-  // 1q2w3e4r
-
   Future<LoginRegisterData> signInLocal(String email, String password) async {
     FirebaseAuth auth = FirebaseAuth.instance;
     User? user;
@@ -74,9 +71,7 @@ class FirebaseUtils {
 
     bool registered = false;
     String? error;
-    // arlc@gmail.com
-    // 1q2w3e4r
-
+    
     try {
       UserCredential userCredential = await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: password);
@@ -585,13 +580,3 @@ class FirebaseUtils {
   }
 }
 
-/*
-
-1) lista utenti array a cui mandare Messaggio
-
-2) lista pushToken nel DB se ci sono più dispositivi
-
-3) eliminare pushToken quando logOut
-
-
-*/
